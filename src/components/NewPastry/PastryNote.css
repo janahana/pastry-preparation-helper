@@ -1,0 +1,52 @@
+.submit-form {
+  background-color: rgb(240, 222, 222);
+  padding: 25pt;
+  padding-left: 150pt;
+}
+
+span {
+  line-height: 23.5pt;
+  letter-spacing: 1.5pt;
+}
+
+.btn-cancel {
+  background-color: rgb(204, 75, 75);
+}
+
+.btn-submit {
+  background-color: #564335;
+  color: antiquewhite;
+  margin-left: 15pt;
+}
+
+button {
+  border-radius: 5pt;
+  width: 75pt;
+  max-width: calc(100vw-100pt);
+  height: 27.5pt;
+  margin: 5pt;
+  letter-spacing: 2.5pt;
+}
+
+button:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+input {
+  padding-left: 5pt;
+  margin-bottom: 12.5pt;
+  width: 500pt;
+}
+
+input#hearted {
+  width: 10pt;
+}
+
+.checked-ingredients,
+.checked-weights,
+.checked-separators {
+  color: pink;
+  font-size: 0.8rem;
+  padding-left: 50pt;
+}

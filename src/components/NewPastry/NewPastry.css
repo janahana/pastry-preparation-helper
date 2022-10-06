@@ -1,0 +1,7 @@
+.start-note-btn {
+  width: 50vw;
+  min-width: 300pt;
+  margin-left: 50vw;
+  transform: translateX(-50%);
+  font-size: 14pt;
+}

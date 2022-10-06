@@ -1,0 +1,30 @@
+.pastry-log-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55pt;
+  height: 55pt;
+  background-color: #564335;
+  border-radius: 12.5pt;
+}
+
+.pastry-log-time__year,
+.pastry-log-time__month,
+.pastry-log-time__day {
+  color: #f7f3e7;
+  text-align: center;
+}
+
+.pastry-log-time__year {
+  font-size: 0.75rem;
+}
+
+.pastry-log-time__month {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.pastry-log-time__day {
+  font-size: 0.95rem;
+  font-weight: 700;
+}

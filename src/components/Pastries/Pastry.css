@@ -1,0 +1,143 @@
+.card {
+  display: flex;
+  justify-content: flex-start;
+  background-color: antiquewhite;
+  width: 600pt;
+  margin: 15pt auto;
+  padding: 15pt;
+}
+
+.date-container {
+  margin: 10pt;
+}
+
+.photo-container {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column;
+  justify-content: center; */
+  background-color: rgb(240, 222, 222);
+  border-radius: 12.5pt;
+}
+/* Card not working */
+
+.content-container {
+  width: 100%;
+}
+
+/* img.homemade-pastry {
+  display: block;
+  width: 200pt;
+  height: auto;
+  padding: 10pt;
+  border-radius: 12.5pt;
+  filter: saturate(75%);
+} */
+/* The parent element has a background image, but since the child element establish[e]s a ["]stacking context["] within the parent element, it's not possible for the parent's background image to appear above the child img element (unless you were to completely hide the img element). This is why the z-indexs weren't working as expected. (reference: https://stackoverflow.com/questions/28710659/css-background-image-on-top-of-img) */
+/* would div be a better choice than img? */
+
+div.homemade-pastry {
+  opacity: 0.5;
+}
+
+.heart-circle {
+  z-index: 2;
+  position: absolute;
+  right: 17.5pt;
+  top: 17.5pt;
+  border-radius: 50%;
+  width: 35pt;
+  height: 35pt;
+  background-color: rgb(240, 222, 222);
+  background-clip: padding-box;
+  border: solid transparent 10pt;
+}
+
+.heart-circle:hover {
+  cursor: pointer;
+  transition: 0.5s ease;
+  border: solid rgb(204, 75, 75) 10pt;
+}
+/* border could be gradient */
+
+.heart-circle:hover > .heart::before,
+.heart-circle:hover > .heart::after {
+  transition: 0.5s ease;
+  background-color: rgb(204, 75, 75);
+}
+
+.heart__fav_true::before,
+.heart__fav_true::after {
+  background-color: rgb(204, 75, 75);
+}
+
+.heart__fav_false::before,
+.heart__fav_false::after {
+  background: rgb(236, 143, 143);
+}
+
+.heart {
+  z-index: 1;
+  position: relative;
+  width: 16.7px;
+  height: 15px;
+  margin-top: calc(50% - 7.5px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8.7px;
+  height: 13.3px;
+  border-radius: 12.5px 12.5px 0 0;
+}
+
+.heart::before {
+  left: 8.3px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.pastry-name {
+  font-weight: 700;
+  padding: 10pt 25pt;
+}
+
+.pastry-ingredients {
+  padding-left: 5pt;
+}
+
+.pastry-ingredients:last-child {
+  margin-bottom: 20pt;
+}
+
+.content-container-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.5s ease;
+  padding: 6.5pt;
+  border-radius: 12.5pt 5pt 5pt 5pt;
+}
+
+.content-container:hover .content-container-overlay {
+  opacity: 1;
+}
+
+a.pastry-recipe-link {
+  float: right;
+  color: #f7f3e7;
+  padding: 15pt;
+}

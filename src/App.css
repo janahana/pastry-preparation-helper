@@ -1,0 +1,70 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f7f3e7;
+}
+
+* {
+  /* border: solid 1px red; */
+  position: relative;
+  color: #564335;
+  letter-spacing: 1.25pt;
+  line-height: 17.5pt;
+}
+
+header {
+  background-image: url("/public/heather-barnes-a1d-DBJ-bpw-unsplash.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+/* overlay */
+header::before {
+  background-color: rgba(0, 0, 0, 0.37);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  text-align: center;
+  line-height: 2.25em;
+  color: white;
+}
+
+.json-data-display-area {
+  display: none;
+}
+
+.copyright {
+  text-align: right;
+}
+
+.json-data-display-btn,
+.json-data-hide-btn .json-data-display-area {
+  width: 50vw;
+  min-width: 300pt;
+  margin-left: 50vw;
+  transform: translateX(-50%);
+}
+
+.json-data-display-area {
+  background-color: antiquewhite;
+  padding: 12.5pt;
+  font-family: monospace;
+  word-wrap: break-word;
+  border-radius: 12.5pt;
+}
